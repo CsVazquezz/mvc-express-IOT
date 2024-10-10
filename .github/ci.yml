@@ -14,6 +14,7 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x] # Prueba en Node.js version 20
+
     steps:
       # 1. Checkout del código fuente
       - name: Checkout repository
@@ -41,6 +42,7 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x] # Asegura que el build se pruebe en las mismas versiones de Node.js
+
     steps:
       # 1. Checkout del código fuente
       - name: Checkout repository
@@ -60,3 +62,5 @@ jobs:
       # 4. Compilar el proyecto TypeScript
       - name: Build project
         run: npm run build
+
+        
