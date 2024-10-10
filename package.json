@@ -4,16 +4,22 @@
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "node dist/index.js",
     "dev": "nodemon"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "node",
+    "express",
+    "typescript",
+    "eslint",
+    "prettier"
+
+  ],
+  "author": "Carlos Manuel Martinez Vazquez",
+  "license": "MIT",
+  "description": "Express project for IOT / TEC",
   "dependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/express": "^5.0.0",
