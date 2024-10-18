@@ -9,10 +9,10 @@ import {
 
 const router = Router();
 
-router.post("/", createStudent);
-
 // Regresa todos los alumnos en la base de datos
 router.get("/students", getStudents);
+
+router.post("/", createStudent);
 
 router.put("/:id", updateStudent);
 

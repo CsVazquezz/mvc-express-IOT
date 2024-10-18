@@ -2,13 +2,6 @@ import pool from "../db";
 import { ResultSetHeader, RowDataPacket } from "mysql2/promise";
 import { Student } from "../interfaces/student";
 
-// Tipo para representar un Alumno
-export interface Alumno {
-  id: number;
-  nombre: string;
-  fecha_nacimiento: Date;
-}
-
 // Obtener todos los alumnos
 export const findAllUsers = async (): Promise<Student[]> => {
   const [rows] = await pool.query<RowDataPacket[]>("SELECT * FROM alumnos");
