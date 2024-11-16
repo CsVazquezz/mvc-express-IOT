@@ -1,6 +1,8 @@
 import dotenvFlow from "dotenv-flow";
 import express from "express";
 import studentRouter from "./routes/student";
+import teacherRouter from "./routes/teacher";
+import courseRouter from "./routes/course";
 import testRoutes from "./routes/test";
 import unknownResource from "./middlewares/uknown-resource";
 import unknownError from "./middlewares/uknown-error";
@@ -31,6 +33,13 @@ app.use(express.json());
 
 // Rutas de la api
 app.use("/api/v1/student", studentRouter);
+app.use("/api/v1/teacher", teacherRouter);
+app.use("/aoi/v1/course", courseRouter);
+
+//Ruta student, teacher, courses
+app.use("/student", studentRouter);
+app.use("/teacher", teacherRouter);
+app.use("/course", courseRouter);
 
 // Rutas de prueba
 app.use("/error", testRoutes);
