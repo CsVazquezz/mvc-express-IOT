@@ -34,7 +34,7 @@ app.use(express.json());
 // Rutas de la api
 app.use("/api/v1/student", studentRouter);
 app.use("/api/v1/teacher", teacherRouter);
-app.use("/aoi/v1/course", courseRouter);
+app.use("/api/v1/course", courseRouter);
 
 //Ruta student, teacher, courses
 app.use("/student", studentRouter);
